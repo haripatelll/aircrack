@@ -20,3 +20,9 @@ clear
 echo "1. Wordlist"
 echo "2. Custom"
 read option
+aircrack-ng -w $wordlist ./cap-01.cap
+echo Disabling Monitor
+airmon-ng stop $mon
+echo Deleting Handshake
+rm cap*
+echo done!
