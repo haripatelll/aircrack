@@ -20,6 +20,12 @@ clear
 echo "1. Wordlist"
 echo "2. Custom"
 read option
+if [ $option == "1" ]; then
+   wordlist="/usr/share/wordlists/rockyou.txt"
+else
+   echo Enter Path Of Your Custom Wordlist.
+   read wordlist
+fi
 aircrack-ng -w $wordlist ./cap-01.cap
 echo Disabling Monitor
 airmon-ng stop $mon
